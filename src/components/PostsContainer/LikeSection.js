@@ -3,18 +3,18 @@
 // HINT: You will need to add an onClick event pass through your props and update the hard coded Likes
 import React from "react";
 
-const LikeSection = props => {
+const LikeSection = ({ likes, increaseLikes }) => {
   return (
     <div>
       <div className="like-section" key="likes-icons-container" >
-        <div className="like-section-wrapper">
+        <div className="like-section-wrapper" onClick={increaseLikes} >
           <i className="far fa-heart" />
         </div>
         <div className="like-section-wrapper">
           <i className="far fa-comment" />
         </div>
       </div>
-      <p className="like-number">{props.post.likes} likes</p>
+      <p className="like-number">{likes} likes</p>
     </div>
   )
 };
