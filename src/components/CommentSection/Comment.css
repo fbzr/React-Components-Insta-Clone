@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .comment-text {
   text-align: left;
   padding: 2px;
