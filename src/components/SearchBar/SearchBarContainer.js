@@ -2,8 +2,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = ({posts, updateSearch}) => {
-
+const SearchBar = ({ updateSearch }) => {
   const checkSearch = (e) => {
     updateSearch(e.target.value);
   }

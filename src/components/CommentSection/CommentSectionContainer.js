@@ -6,7 +6,7 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-  const [comments, setComments] = useState(props.comments)
+  const [comments, setComments] = useState(props.comments);  
 
   let newComment = '';
 
@@ -20,6 +20,7 @@ const CommentSection = props => {
       username: 'fabricio',
       text: newComment
     }]);
+    e.currentTarget.querySelector('input').value = '';
   }
 
   return (
