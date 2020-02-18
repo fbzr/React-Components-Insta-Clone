@@ -15,8 +15,6 @@ const Post = ({post}) => {
     setLikes(prevLikes => prevLikes + 1);
   }
 
-  // setLikes(prevLikes => prevLikes + 1)
-
   return (
     <div className="post-border">
       <PostHeader
