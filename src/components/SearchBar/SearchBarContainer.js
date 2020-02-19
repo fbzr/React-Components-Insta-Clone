@@ -2,14 +2,18 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ updateSearch }) => {
+  const checkSearch = (e) => {
+    updateSearch(e.target.value);
+  }
+
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
-        <i className="fab fa-instagram" />
+        <i className="fab fa-instagram fa-2x" />
       </div>
       <form className="search-form">
-        <input
+        <input onChange={checkSearch}
           type="text"
           placeholder="Search"
         />
