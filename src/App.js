@@ -38,7 +38,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar updateSearch={updateSearch}/>
-      <PostsPage posts={posts} search={search} increaseLikes={increaseLikes} />
+      <PostsPage posts={posts} search={search} increaseLikes={increaseLikes} addComment={addComment} />
       {/* Add imported components here to render them */}
     </div>
   );

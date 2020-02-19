@@ -4,8 +4,7 @@ import React from "react";
 import Post from "./Post";
 import "./Posts.css";
 
-const PostsPage = ({posts, search, increaseLikes}) => {
-  
+const PostsPage = ({posts, search, increaseLikes, addComment}) => {
   return (
     <div className="posts-container-wrapper">
       {
