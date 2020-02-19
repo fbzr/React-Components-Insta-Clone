@@ -14,17 +14,31 @@ import data from "./dummy-data";
 
 const App = () => {
   // set up state for your data
-  const [posts] = useState(data);
+  const [posts, setPosts] = useState(data);
   const [search, setSearch] = useState('');
 
   const updateSearch = (searchString) => {
     setSearch(searchString);
   }
 
+  const increaseLikes = (post) => {
+    setPosts(prevPosts => [...prevPosts, {
+      ...post,
+      likes: post.likes + 1
+    }]);
+  }
+
+  const addComment = (post, comment) => {
+    setPosts(prevPosts => [...prevPosts, {
+      ...post,
+      comments: post.comments.push(comment)
+    }])
+  }
+
   return (
     <div className="App">
       <SearchBar updateSearch={updateSearch}/>
-      <PostsPage posts={posts} search={search} />
+      <PostsPage posts={posts} search={search} increaseLikes={increaseLikes} />
       {/* Add imported components here to render them */}
     </div>
   );

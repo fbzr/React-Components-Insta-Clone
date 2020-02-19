@@ -7,14 +7,14 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 // pass props in this file to
-const Post = ({post}) => {
+const Post = ({post, increaseLikes}) => {
   // set up state for the likes
-  const [likes, setLikes] = useState(post.likes);
+  // const [likes, setLikes] = useState(post.likes);
 
-  const increaseLikes = () => {
-    setLikes(prevLikes => prevLikes + 1);
-  }
-
+  // const increaseLikes = () => {
+  //   setLikes(prevLikes => prevLikes + 1);
+  // }
+ 
   return (
     <div className="post-border">
       <PostHeader
@@ -30,7 +30,7 @@ const Post = ({post}) => {
           src={post.imageUrl}
         />
       </div>
-      <LikeSection likes={likes} increaseLikes={increaseLikes} />
+      <LikeSection post={post} increaseLikes={increaseLikes} />
       <CommentSection
         postId={post.imageUrl}
         comments={post.comments}
